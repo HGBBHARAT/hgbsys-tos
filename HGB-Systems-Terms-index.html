@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b16">
+  <meta name="description" content="HGB Systems Terms of Service — remote server management for Emergency Response: Liberty County.">
+  <title>HGB Systems | Terms of Service</title>
+
+  <script>
+    // Configure your links here.
+    const DISCORD_SERVER_URL = "https://discord.gg/YOUR_HGB_INVITE";
+    const PRC_DISCORD_URL = "https://discord.gg/prc";
+    const PRIVACY_POLICY_URL = "https://hgbbharat.github.io/hgbsys-privacypolicy";
+  </script>
+
+  <style>
+    :root {
+      --bg: #080b16;
+      --panel: rgba(16, 22, 42, .78);
+      --text: #eef3ff;
+      --muted: #9aa8c5;
+      --cyan: #39e7ff;
+      --purple: #a66bff;
+      --orange: #ff9b42;
+      --line: rgba(117, 151, 255, .19);
+      --glow: 0 0 28px rgba(57, 231, 255, .17);
+      --radius: 22px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      margin: 0; color: var(--text);
+      background: radial-gradient(ellipse at 12% 8%, rgba(79,58,180,.22), transparent 36%),
+                  radial-gradient(ellipse at 88% 24%, rgba(0,190,220,.13), transparent 34%), var(--bg);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65; min-height: 100vh;
+    }
+    body::before {
+      content: ""; position: fixed; inset: 0; pointer-events: none; z-index: -1; opacity: .17;
+      background-image: linear-gradient(rgba(116,144,255,.12) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(116,144,255,.12) 1px, transparent 1px);
+      background-size: 54px 54px;
+      mask-image: linear-gradient(to bottom, black, transparent 78%);
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    header {
+      position: sticky; top: 0; z-index: 10; backdrop-filter: blur(18px);
+      background: rgba(8,11,22,.78); border-bottom: 1px solid var(--line);
+    }
+    .nav { height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: -.03em; }
+    .brand img { width: 42px; height: 42px; object-fit: contain; border-radius: 12px; }
+    .brand-mark {
+      width: 42px; height: 42px; display: none; place-items: center; border-radius: 12px;
+      color: #061018; font-weight: 900; background: linear-gradient(135deg,var(--cyan),var(--purple));
+    }
+    .nav-links { display: flex; align-items: center; gap: 25px; color: var(--muted); font-size: .92rem; }
+    .nav-links a:hover, footer a:hover { color: var(--cyan); }
+    .button {
+      display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+      padding: 12px 19px; border: 1px solid rgba(57,231,255,.5); border-radius: 12px;
+      color: #061018; font-weight: 800; background: linear-gradient(110deg,var(--cyan),#8bf4ff);
+      box-shadow: var(--glow); transition: .2s ease;
+    }
+    .button:hover { transform: translateY(-2px); box-shadow: 0 0 36px rgba(57,231,255,.3); }
+    .button.secondary { color: var(--text); background: rgba(255,255,255,.035); border-color: var(--line); box-shadow: none; }
+    .hero { padding: 68px 0 38px; text-align: center; position: relative; }
+    .hero-glow {
+      position: absolute; width: 450px; height: 230px; left: 50%; top: 65px;
+      transform: translateX(-50%); background: rgba(70,120,255,.12); filter: blur(85px); z-index: -1;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 9px; padding: 7px 13px;
+      border: 1px solid var(--line); border-radius: 999px; color: #b9c8e8;
+      background: rgba(17,24,45,.65); font-size: .82rem;
+    }
+    .pulse { width: 7px; height: 7px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 12px var(--cyan); }
+    h1 { margin: 24px 0 8px; font-size: clamp(3rem,8vw,5.5rem); line-height: 1; letter-spacing: -.075em; }
+    .gradient {
+      color: transparent; background: linear-gradient(100deg,#fff 15%,var(--cyan) 53%,#bd8bff 88%);
+      background-clip: text; -webkit-background-clip: text;
+    }
+    .hero p { color: var(--muted); max-width: 690px; margin: 15px auto 0; }
+    .hero-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 13px; margin-top: 25px; }
+    .effective {
+      display: inline-block; margin-top: 10px; padding: 5px 10px; border: 1px solid var(--line);
+      border-radius: 8px; color: #c5d1ec; font-size: .82rem;
+    }
+
+    /* PRC feature is intentionally placed near the top and uses its own warm orange glow. */
+    .prc-feature {
+      margin: 12px auto 58px; padding: 26px;
+      display: flex; align-items: center; gap: 24px;
+      border: 1px solid rgba(255,155,66,.52); border-radius: var(--radius);
+      background:
+        radial-gradient(ellipse at 0% 50%, rgba(255,132,42,.20), transparent 48%),
+        linear-gradient(120deg, rgba(52,31,23,.65), rgba(16,22,42,.88));
+      box-shadow: 0 0 24px rgba(255,132,42,.15), 0 0 65px rgba(255,132,42,.09), inset 0 0 30px rgba(255,155,66,.035);
+    }
+    .prc-logo {
+      width: 104px; height: 104px; object-fit: contain; flex: 0 0 auto;
+      border-radius: 18px; padding: 7px; background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,173,99,.25);
+      filter: drop-shadow(0 0 15px rgba(255,145,55,.34));
+    }
+    .prc-copy { flex: 1; }
+    .kicker { color: var(--orange); text-transform: uppercase; letter-spacing: .17em; font-size: .74rem; font-weight: 800; }
+    .prc-copy h2 { margin: 5px 0; font-size: 1.65rem; letter-spacing: -.04em; }
+    .prc-copy p { color: #c2b4a8; margin: 0 0 14px; font-size: .93rem; }
+    .prc-button {
+      display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+      padding: 11px 18px; border-radius: 11px; font-weight: 850; color: #241205;
+      background: linear-gradient(110deg, #ffb35f, #ff842e);
+      border: 1px solid rgba(255,195,130,.65);
+      box-shadow: 0 0 22px rgba(255,137,48,.28); transition: .2s ease;
+    }
+    .prc-button:hover { transform: translateY(-2px); box-shadow: 0 0 34px rgba(255,137,48,.4); }
+    .disclaimer { font-size: .82rem !important; color: #b9a99d !important; margin: 12px 0 0 !important; }
+
+    .section { padding: 10px 0 75px; }
+    .section-head { margin-bottom: 24px; }
+    .section-head .kicker { color: var(--cyan); }
+    .section-head h2 { margin: 7px 0 5px; font-size: clamp(1.8rem,4vw,2.5rem); letter-spacing: -.045em; }
+    .section-head p { margin: 0; color: var(--muted); }
+    .policy-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 15px; }
+    .policy-card { padding: 23px 24px; background: var(--panel); border: 1px solid var(--line); border-radius: 17px; }
+    .policy-card h3 { margin: 0 0 10px; font-size: 1.04rem; color: #f2f6ff; }
+    .policy-card p { color: var(--muted); margin: 0 0 10px; font-size: .92rem; }
+    .policy-card ul { margin: 0; padding-left: 19px; color: var(--muted); font-size: .91rem; }
+    .policy-card li { padding: 3px 0 3px 3px; }
+    footer { border-top: 1px solid var(--line); padding: 25px 0; color: var(--muted); font-size: .86rem; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px; }
+    .footer-links { display: flex; gap: 20px; }
+
+    .discord-cta {
+      margin: 0 auto 78px; padding: 38px 28px; text-align: center;
+      border: 1px solid rgba(57,231,255,.42); border-radius: 24px;
+      background: radial-gradient(ellipse at 50% 0%, rgba(57,231,255,.15), transparent 65%), var(--panel);
+      box-shadow: 0 0 36px rgba(57,231,255,.10);
+    }
+    .discord-cta h2 { margin: 0 0 7px; font-size: clamp(1.7rem,4vw,2.3rem); letter-spacing: -.045em; }
+    .discord-cta p { color: var(--muted); margin: 0 auto 22px; max-width: 600px; }
+    .discord-big {
+      min-width: min(100%, 330px); padding: 19px 30px; border-radius: 15px;
+      font-size: 1.12rem; letter-spacing: .01em;
+      box-shadow: 0 0 24px rgba(57,231,255,.25), 0 0 55px rgba(57,231,255,.12);
+    }
+    @media(max-width:760px) {
+      .nav-links { gap: 14px; }
+      .nav-links a:not(.button) { display: none; }
+      .hero { padding: 55px 0 30px; }
+      .prc-feature { align-items: flex-start; flex-direction: column; padding: 23px; }
+      .prc-logo { width: 84px; height: 84px; }
+      .policy-grid { grid-template-columns: 1fr; }
+      .discord-cta { padding: 30px 20px; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="HGB Systems home">
+      <img src="logo.png" alt="HGB Systems logo" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+      <span class="brand-mark">HGB</span>
+      <span>HGB <span class="gradient">Systems</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#terms">Terms</a>
+      <a href="#prc">PRC Community</a>
+      <a class="button" id="nav-discord" href="#">HGB Discord ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero wrap">
+    <div class="hero-glow"></div>
+    <div class="eyebrow"><span class="pulse"></span> HGB SYSTEMS · LEGAL</div>
+    <h1><span class="gradient">Terms</span> of Service</h1>
+    <p>These Terms govern your use of the HGB Systems Discord bot and associated management software.</p>
+    <span class="effective">Effective date: November 6, 2026</span>
+    <div class="hero-actions">
+      <a class="button secondary" id="privacy-hero" href="#">Read Privacy Policy ↗</a>
+    </div>
+  </section>
+
+  <section class="wrap prc-feature" id="prc">
+    <img class="prc-logo" src="prc.png" alt="Police Roleplay Community logo">
+    <div class="prc-copy">
+      <span class="kicker">Community rules</span>
+      <h2>Police Roleplay Community (PRC)</h2>
+      <p>Police Roleplay Community rules apply to relevant PRC community participation and roleplay activities. Please review and follow the rules set by the Police Roleplay Community.</p>
+      <a class="prc-button" id="prc-button" href="#" target="_blank" rel="noopener noreferrer">Check out PRC ↗</a>
+      <p class="disclaimer">HGB Systems is an independent platform and is not operated, managed, or partnered with the Police Roleplay Community.</p>
+    </div>
+  </section>
+
+  <section class="section wrap" id="terms">
+    <div class="section-head">
+      <span class="kicker">Terms & conditions</span>
+      <h2>Using HGB Systems</h2>
+      <p>By inviting or using HGB Systems in your Discord server, you agree to these terms.</p>
+    </div>
+    <div class="policy-grid">
+      <article class="policy-card">
+        <h3>1. Description of Service</h3>
+        <p>HGB Systems provides a scalable remote server management system for Emergency Response: Liberty County (ERLC) servers on Roblox. Features include moderation logging, session tracking, player verification management, automated event monitoring, and planned expansion into Discord economy, department management, and CAD systems.</p>
+      </article>
+      <article class="policy-card">
+        <h3>2. Acceptable Use and Responsibilities</h3>
+        <p>By using HGB Systems, you agree to:</p>
+        <ul>
+          <li>Comply with the Discord Terms of Service, Discord Community Guidelines, and Roblox Terms of Service.</li>
+          <li>Not use the bot to abuse, exploit, spam, or disrupt Roblox or Discord server operations.</li>
+          <li>Maintain appropriate staff permissions within your server to prevent unauthorized configuration changes or abuse of moderation/logging commands.</li>
+        </ul>
+      </article>
+      <article class="policy-card">
+        <h3>3. Data Collection and Usage</h3>
+        <p>Use of HGB Systems is also governed by our Privacy Policy. We collect and store minimal data necessary for bot operations, including Discord user/guild IDs, Roblox user/guild associations, server moderation logs, session events, and in-game activity history.</p>
+        <p><a id="privacy-inline" href="#" style="color:var(--cyan);text-decoration:underline">View the HGB Systems Privacy Policy ↗</a></p>
+      </article>
+      <article class="policy-card">
+        <h3>4. Moderation Actions and Data Integrity</h3>
+        <ul>
+          <li>HGB Systems uses non-destructive record management (such as "Voided" status) for server logs to preserve server audit trails.</li>
+          <li>Server administrators bear sole responsibility for all moderation actions executed using HGB Systems commands within their respective guilds.</li>
+        </ul>
+      </article>
+      <article class="policy-card">
+        <h3>5. Availability and Service Disclaimer</h3>
+        <ul>
+          <li><strong>Service Provided "As-Is":</strong> HGB Systems is provided on an "as-is" and "as-available" basis. We make no guarantees regarding uninterrupted uptime or fault-free operation.</li>
+          <li><strong>Third-Party Dependencies:</strong> Service availability may depend on third-party APIs (including Discord API and ERLC/Roblox APIs). We are not responsible for service interruptions caused by third-party outages.</li>
+        </ul>
+      </article>
+      <article class="policy-card">
+        <h3>6. Termination and Access Restrictions</h3>
+        <p>We reserve the right to suspend or terminate access to HGB Systems for any Discord server or user found violating these Terms of Service, abusing bot commands, or engaging in malicious activity against our infrastructure.</p>
+      </article>
+      <article class="policy-card">
+        <h3>7. Changes to Terms</h3>
+        <p>We reserve the right to update these Terms of Service at any time. Continued use of HGB Systems following any modifications constitutes acceptance of the updated terms.</p>
+      </article>
+      <article class="policy-card">
+        <h3>8. Contact Information</h3>
+        <p>For support, questions, or inquiries regarding these Terms of Service, please contact us through the official HGB Systems Discord support server.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="wrap discord-cta" id="contact">
+    <span class="kicker">Official HGB community</span>
+    <h2>Join the HGB Systems Discord</h2>
+    <p>Get support, stay updated, and connect with the HGB Systems community through our official Discord server.</p>
+    <a class="button discord-big" id="main-discord" href="#" target="_blank" rel="noopener noreferrer">Join HGB Systems Discord ↗</a>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>© <span id="year"></span> HGB Systems. All rights reserved.</span>
+    <div class="footer-links">
+      <a id="privacy-footer" href="#">Privacy Policy</a>
+      <a href="#terms">Terms of Service</a>
+      <a id="discord-footer" href="#" target="_blank" rel="noopener noreferrer">HGB Discord</a>
+      <a id="prc-footer" href="#" target="_blank" rel="noopener noreferrer">PRC Discord</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  ["nav-discord", "main-discord", "discord-footer"].forEach(id => {
+    document.getElementById(id).href = DISCORD_SERVER_URL;
+  });
+
+  ["prc-button", "prc-footer"].forEach(id => {
+    document.getElementById(id).href = PRC_DISCORD_URL;
+  });
+
+  ["privacy-hero", "privacy-inline", "privacy-footer"].forEach(id => {
+    document.getElementById(id).href = PRIVACY_POLICY_URL;
+  });
+</script>
+</body>
+</html>
